@@ -46,4 +46,7 @@ docker run -it ubuntu:16.04 /bin/bash (cria uma maquina com 16.04)
 docker ps
 docker commit 2f5b5bdd9fee ubuntugoku (salva esta imagem como uma imagem nova...)
 docker run -it ubuntugoku /bin/bash (executa container) (para sair e deixar rodando digita ctrl + p + q)
+docker commit --change 'CMD ["apache2ctl","-D FOREGROUND "]' -c 'Expose 85' 8e8b88209131 apache2 (commit change com apache)
+docker images
+docker run -d -p 5000:80 apache2 (inicia a maquina com apache 2 na porta 5000)
 
